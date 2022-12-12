@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/section_notes"
+        android:checkableBehavior="single">
+        <item
+            android:id="@id/mainFragment"
+            android:icon="@drawable/ic_all_notes"
+            android:title="All notes"/>
+        <item
+            android:icon="@drawable/ic_calendar"
+            android:title="Calendar"/>
+        <item
+            android:icon="@drawable/ic_alarm"
+            android:title="Reminders"/>
+        <item
+            android:icon="@drawable/ic_archive"
+            android:title="Archive"/>
+        <item
+            android:icon="@drawable/ic_favorites"
+            android:title="Favorites"/>
+        <item
+            android:id="@id/categoryFragment"
+            android:icon="@drawable/ic_categories"
+            android:title="Category"/>
+        <item
+            android:icon="@drawable/ic_tag"
+            android:title="Tags"/>
+        <item
+            android:icon="@drawable/ic_delete"
+            android:title="Trash"/>
+    </group>
+
+    <group>
+        <item
+            android:icon="@drawable/ic_backup"
+            android:title="Sync &amp; Backup"/>
+        <item
+            android:icon="@drawable/ic_widget"
+            android:title="Widget"/>
+        <item
+            android:icon="@drawable/ic_follow_us"
+            android:title="More apps (AD)"/>
+        <item
+            android:icon="@drawable/ic_settings"
+            android:title="Settings"/>
+    </group>
+
+</menu>
