@@ -4,30 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/mainFragment">
+
     <fragment
         android:id="@+id/editorFragment"
         android:name="ua.amv0107.mynote.ui.editor.EditorFragment"
         android:label="EditorFragment"
-        tools:layout="@layout/fragment_editor" >
+        tools:layout="@layout/fragment_editor">
+        <action
+            android:id="@+id/action_editorFragment_to_editorCategoryDialog"
+            app:destination="@id/editorCategoryDialog" />
     </fragment>
+
     <fragment
         android:id="@+id/categoryFragment"
         android:name="ua.amv0107.mynote.ui.category.CategoryFragment"
         android:label="fragment_category"
-        tools:layout="@layout/fragment_category" >
+        tools:layout="@layout/fragment_category">
         <action
             android:id="@+id/action_categoryFragment_to_editorCategoryDialog"
             app:destination="@id/editorCategoryDialog" />
->
     </fragment>
+
     <fragment
         android:id="@+id/mainFragment"
         android:name="ua.amv0107.mynote.ui.main.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" >
+        tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_mainFragment_to_editorFragment"
-            app:destination="@id/editorFragment" />
+            app:destination="@id/editorFragment"
+            app:popUpToInclusive="false" />
         <action
             android:id="@+id/action_mainFragment_to_categoryFragment"
             app:destination="@id/categoryFragment" />
@@ -36,7 +42,7 @@
         android:id="@+id/editorCategoryDialog"
         android:name="ua.amv0107.mynote.ui.category.dialog.EditorCategoryDialog"
         android:label="dialog_editor_category"
-        tools:layout="@layout/dialog_editor_category" >
+        tools:layout="@layout/dialog_editor_category">
         <argument
             android:name="category"
             app:argType="ua.amv0107.mynote.data.model.Category"
